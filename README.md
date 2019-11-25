@@ -26,20 +26,3 @@ or
 $ vagrant up
 $ vagrant provision
 ```
-
-## jenkins (optional)
-You can deploy by jenkins
-
-### URL for jenkins
-```
-http://192.168.1.100:8080
-```
-
-### setup job for deploy
-job: Build > Command > Execute shell
-```
-REMOTE_PATH=/vagrant/{Project}/xxxxxx
-LOCAL_PATH=${WORKSPACE}
-
-rm -rf $REMOTE_PATH/* && cp -a $LOCAL_PATH/* $REMOTE_PATH
-```
